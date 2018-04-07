@@ -18,7 +18,7 @@ void mrb_esp32_ext_ms_to_ticks_gem_init(mrb_state* mrb) {
   /* ESP32 */
   mrb_esp32 = mrb_define_module(mrb, "ESP32");
 
-  mrb_define_singleton_method(mrb, mrb_esp32, "ms_to_ticks", mrb_esp32_ms_to_ticks, MRB_ARGS_REQ(1));
+  mrb_define_class_method(mrb, mrb_esp32, "ms_to_ticks", mrb_esp32_ms_to_ticks, MRB_ARGS_REQ(1));
 }
 
 void mrb_esp32_ext_ms_to_ticks_gem_final(mrb_state* mrb) {
