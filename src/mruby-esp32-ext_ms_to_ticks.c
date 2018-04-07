@@ -8,7 +8,7 @@
  */
 static mrb_value mrb_esp32_ms_to_ticks(mrb_state *mrb, mrb_value self) {
   int ms;
-  mrb_get_args("i", &ms);
+  mrb_get_args(mrb, "i", &ms);
   return mrb_fixnum_value(ms / portTICK_RATE_MS);
 }
 
